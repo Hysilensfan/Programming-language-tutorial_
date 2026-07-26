@@ -10,8 +10,45 @@
   </style>
 </head>
 <body>
-  <h1>First challenge ヽ(´ー`)ノ</h1>
-  <pre>
+  <h1>you guys homework ヽ(´ー`)ノ</h1>
+  <pre>EX.Simulating Cpython list
+
+Cpython list可以同時存取 int 、 str
+甚至存取 dict、set、list!
+
+我天 太酷了 你也來實作看看吧!(⁠´⁠ ⁠.⁠ ⁠.̫⁠ ⁠.⁠ ⁠`⁠)(⁠ᗒ⁠ᗩ⁠ᗕ⁠)
+
+輸入：
+讀取一次輸入 該次輸入為 list 的第一個元素（索引值為0的元素）
+且固定初始化為字串(str) 之後會將該元素加進去 list
+
+之後再讀取10次輸入 每次輸入索求一個字串a
+
+字串a裡面一定包含兩個元素(element s)：bc
+
+b 與 c 會以一個半形空白隔開
+b 為示意宣告 c 型態的字串
+b 一定會是 int、double、float、str 其中一個字串
+最後會將字串 c 以 b 類型加入該 list
+
+輸出：
+每次更新後的 list
+
+提示&限制：
+1.Cpython中 float 與 double 都是float型態
+2.添加的元素 c 假設為 str 一定不包含特殊字元（例：/n）以及半形空白(' ')
+3.輸出格式模仿Cpython的 list
+Ex:[element1, element 2]
+也就是最前面要加上前中括號 每個元素以半形逗號與一個半形空白相隔
+結尾為後中括號
+4.字串 a 一定符合題目格式
+（如：“b c“）
+5.因為要求索取第0個元素 以及後續讀取10次輸入 所以陣列長度至少為11+1（\0完結符號） 也就是12
+6.輸入並不會發生EOFerror、over_flow err、out_of_range err
+7.輸入的字串(不包含完結符號) 其總長度 <= 10
+8.每個被加進去list的元素不可被改變（unchangeable）
+9.看完上述8條提示 我應該已經把規則寫死了 如果你用 python 做 不用特地把元素放進tuple裡面 但如果是其他語言... 請將元素宣告為不可改寫
+  
   </pre>
 </body>
 </html>
