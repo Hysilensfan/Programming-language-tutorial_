@@ -17,38 +17,28 @@
   <h2>1.HTMLgrammer convert to MD grammer
     </h2>
     <pre>HTML語法轉換MD語法
-
 傳寫一個程式碼 該程式碼會將HTML語法的字串轉換為MD語法
-
 針對圖片最基礎的轉換規則如下:
-1.將開頭的 `<img src = ` 以及尾端的 `>` 去除
+1.將開頭的 `&lt;img src = ` 以及尾端的 `&gt;` 去除
 2.之後在開頭加上 `![image](` 以及尾端加上 `)`
-
 注意 要跟題目一樣去除MD字串內的空白(' ')部分!
-
 範例輸入:
-<img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png>
-
+&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
 範例輸出:
 ![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
-
 輸入:
 一個字串s
-
 輸出:
 轉換過後的字串
-
 提示:
 雖然是語法的轉換 但透過觀察可以發現:
 1.MTML語法中被複製過來的圖片 通常字元數量(包含語法必要字串)為53
-
 以下是測試資料 看看你能不能成功轉換:
-<img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png>
-<img src = https://hackmd.io/_uploads/HJBax-h7Ge.png>
-<img src = https://hackmd.io/_uploads/HkyiGZnmfl.png>
-<img src = https://hackmd.io/_uploads/BkAxEW2QMl.png>
-<img src = https://hackmd.io/_uploads/S1GDNW3Qfg.png>
-
+&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
+&lt;img src = https://hackmd.io/_uploads/HJBax-h7Ge.png&gt;
+&lt;img src = https://hackmd.io/_uploads/HkyiGZnmfl.png&gt;
+&lt;img src = https://hackmd.io/_uploads/BkAxEW2QMl.png&gt;
+&lt;img src = https://hackmd.io/_uploads/S1GDNW3Qfg.png&gt;
 測資輸出:
 ![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
 ![image](https://hackmd.io/_uploads/HJBax-h7Ge.png)
