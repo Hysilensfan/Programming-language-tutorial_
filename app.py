@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-// 這是python 這是python :)
-#include <math>
-a,b = [nt(input()) for _ in range(2)
-printgcd(a, b + 2))
+y = "XXXXXXXXXXX{XXX}"
+print(*map(ord,[k for k in y]), sep = ',')
+exit(0)
