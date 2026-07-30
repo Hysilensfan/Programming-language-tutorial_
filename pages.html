@@ -14,7 +14,22 @@
         </pre>
         <!-- hysilensfan{u_found_me!}-->
         <img src="https://hysilensfan.github.io/Programming-language-tutorial_/images/recursion_II.png" alt="Recursion">
-        <pre>                                                                             <a href ="https://hysilensfan.github.io/Programming-language-tutorial_/images/recursion_detail.png" alt="Details"><img src="https://hysilensfan.github.io/Programming-language-tutorial_/images/recursion_III.png" alt="Recursion"></a></pre>
+        <pre>                                                                             <img id="recursionImg"
+     src="https://hysilensfan.github.io/Programming-language-tutorial_/images/recursion_III.png"
+     onclick="toggleImage()">
+
+<script>
+function toggleImage() {
+    let img = document.getElementById("recursionImg");
+
+    if (img.src.includes("recursion_III.png")) {
+        img.src = "https://hysilensfan.github.io/Programming-language-tutorial_/images/recursion_detail.png";
+    } else {
+        img.src = "https://hysilensfan.github.io/Programming-language-tutorial_/images/recursion_III.png";
+    }
+}
+</script>
+</pre>
           <img src="https://hysilensfan.github.io/Programming-language-tutorial_/images/recursion_IV.png" alt="Recursion">
           <img src="https://hysilensfan.github.io/Programming-language-tutorial_/images/recursion_V.png" alt="Recursion">
            <img src="https://hysilensfan.github.io/Programming-language-tutorial_/images/recursion_VI.png" alt="Recursion">
