@@ -18,13 +18,13 @@ int main()
     }
     
     FILE *fp = fopen("flag.txt","r");
-    if ( fp == NULL )  // 空檔案
+    if ( fp == NULL )  // to check aren't it a null file
        printf("Failed to open file.!\n");
     else{
         printf("Success to open file!\n");
-        if (fgets(content, sizeof(content), fp) != NULL)  // fp 是用於讀取文件的文件指針
+        if (fgets(content, sizeof(content), fp) != NULL)  // fp use to read the object's point
             printf("%s", content);
-        fclose(fp);  // 關閉檔案
+        fclose(fp);  // close the file
     }
     return 0;
 }
