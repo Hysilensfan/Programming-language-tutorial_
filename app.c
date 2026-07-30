@@ -16,15 +16,6 @@ int main()
         printf("(waiting u click specific link...)");
         scanf("%d", &click_trig);
     }
-    
-    FILE *fp = fopen("flag.txt","r");
-    if ( fp == NULL )  // to check aren't it a null file
-       printf("Failed to open file.!\n");
-    else{
-        printf("Success to open file!\n");
-        if (fgets(content, sizeof(content), fp) != NULL)  // fp use to read the object's point
-            printf("%s", content);
-        fclose(fp);  // close the file
-    }
+    // flag in the comment:) or else diretory
     return 0;
 }
