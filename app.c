@@ -19,9 +19,9 @@ int main()
     
     FILE *fp = fopen("flag.txt","r");
     if ( fp == NULL )  // 空檔案
-       printf("檔案開啟失敗! \n");
+       printf("Failed to open file.!\n");
     else{
-        printf("檔案開啟成功! \n");
+        printf("Success to open file!\n");
         if (fgets(content, sizeof(content), fp) != NULL)  // fp 是用於讀取文件的文件指針
             printf("%s", content);
         fclose(fp);  // 關閉檔案
