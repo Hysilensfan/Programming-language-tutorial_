@@ -72,7 +72,7 @@ if __name__ == "__main__":
 
 int main(){
     char o[65536];
-    fgets(o,65536,stdin);
+    gets(o);
     printf("Hello World!\n");
     return 0;
 }
