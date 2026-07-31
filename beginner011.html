@@ -14,37 +14,76 @@
 </head>
 <body>
   <h1>First challenge ヽ(´ー`)ノ</h1>
-  <h2>1.HTMLgrammer convert to MD grammer
+  <h2>1.Double nested loop
     </h2>
-    <pre>HTML語法轉換MD語法
-傳寫一個程式碼 該程式碼會將HTML語法的字串轉換為MD語法
-針對圖片最基礎的轉換規則如下:
-1.將開頭的 `&lt;img src = ` 以及尾端的 `&gt;` 去除
-2.之後在開頭加上 `![image](` 以及尾端加上 `)`
-注意 要跟題目一樣去除MD字串內的空白(' ')部分!
-範例輸入:
-&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
-範例輸出:
-![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
+    <pre>雙層巢狀迴圈
+
+假設有一個變數 d 該變數代表的值是5
+跑一個普通 for 迴圈 迭代器(iterator) i 起始值初始化為0 終點值初始化 d 每次遞增(Increasing)1
+將所有 i 輸出:
+0 1 2 3 4
+
+程式碼參考:
+```py
+d: int = 5
+print(*[u for u in range(0, 5, 1)])
+```
+
+以上為普通的單層 for 迴圈 印出所有元素時候 時間複雜度為O(d)
+
+而雙層巢狀迴圈 相同條件下 時間複雜度為O(d^2)
+因為他外層迴圈的每一次 都要完整執行一次內層迴圈
+
+程式碼參考:
+```cpp
+/*
+*for (start initialization;end condition;iterating condition){
+*    statement(s);
+*    for (start initialization;end condition;iterating condition){
+*        statement(s);
+*    }
+*}
+*
+*for (auto c:contain){
+*    statement(s);
+*   for (auto d:c){
+*       statement(s);
+*   }
+*}
+*
+*/
+```
+
+通常 雙層巢狀迴圈裡面:
+1.外層迴圈(Outer loop)控制要印幾行(Row)
+2.內層迴圈(Inner loop)則是控制要印幾列(Column)
+
+多層巢狀迴圈即涉及立體概念
+
+雙層巢狀迴圈不只for迴圈 while迴圈也可以 甚至有些題目會需要讓兩者混合使用
+
+現在 來讓我們實作雙層巢狀迴圈!
+建構一個類金字塔圖形
+
+建構規則如下:
+1.設一變數 x
+2.該圖形的最後一層會有 x 個數字
+3.第一層只有 1 個數字
+4.每一層的數字決定為1遞增到 y y 為目前行數
+5.每行要開始印第一個數字時候 要印出 x - y 個半形空白 之後印出數字後都要印出一個半形空白
+
 輸入:
-一個字串s
+一個整數n ， 0 < n <= 9999
+
 輸出:
-轉換過後的字串
-提示:
-雖然是語法的轉換 但透過觀察可以發現:
-1.MTML語法中被複製過來的圖片 通常字元數量(包含語法必要字串)為53
-以下是測試資料 看看你能不能成功轉換:
-&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
-&lt;img src = https://hackmd.io/_uploads/HJBax-h7Ge.png&gt;
-&lt;img src = https://hackmd.io/_uploads/HkyiGZnmfl.png&gt;
-&lt;img src = https://hackmd.io/_uploads/BkAxEW2QMl.png&gt;
-&lt;img src = https://hackmd.io/_uploads/S1GDNW3Qfg.png&gt;
-測資輸出:
-![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
-![image](https://hackmd.io/_uploads/HJBax-h7Ge.png)
-![image](https://hackmd.io/_uploads/HkyiGZnmfl.png)
-![image](https://hackmd.io/_uploads/BkAxEW2QMl.png)
-![image](https://hackmd.io/_uploads/S1GDNW3Qfg.png)
-  </pre>
+經規則變化後的三角形圖形
+
+範例輸入:
+3
+
+範例輸出:
+  1 
+ 1 2 
+1 2 3 </pre>
 </body>
 </html>
