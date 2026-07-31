@@ -14,37 +14,78 @@
 </head>
 <body>
   <h1>First challenge ヽ(´ー`)ノ</h1>
-  <h2>1.HTMLgrammer convert to MD grammer
+  <h2>17.Simple linux shell
     </h2>
-    <pre>HTML語法轉換MD語法
-傳寫一個程式碼 該程式碼會將HTML語法的字串轉換為MD語法
-針對圖片最基礎的轉換規則如下:
-1.將開頭的 `&lt;img src = ` 以及尾端的 `&gt;` 去除
-2.之後在開頭加上 `![image](` 以及尾端加上 `)`
-注意 要跟題目一樣去除MD字串內的空白(' ')部分!
-範例輸入:
-&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
-範例輸出:
-![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
-輸入:
-一個字串s
-輸出:
-轉換過後的字串
+    <pre>超簡易 linux 殼層
+
+簡單模擬一個 linux shell
+
+先備了解:
+(1)./home/test@:~$:該範例為此終端機(Terminal)的提示字元(prompt)
+其中:
+1./home/test 表示目前所在目錄(Diretory)
+2.~$ 表示正在等待使用者輸入指令
+當使用者切換目錄時 提示字元也需跟著改變
+
+(2).cd [diretory]:可以切換到對應目錄
+
+(3).cd ..:會回到上一個目錄
+
+(4).ls:列出該目錄內有什麼
+
+(5).在出現例外情況前 都會不斷印出提示字元 然後等待輸入(waiting for input...)
+
+本試題額外內容:
+(1).假設打了測試指令以外的指令
+則顯示:
+bash:[輸入的不存在指令] No such file or directory or command
+
+(2).主要目錄/home/test裡面有一個資料夾跟一個檔案 分別是/flag與none.txt
+其中:
+1.none.txt裡面是一個換行符號('\n')
+2.載入/flag資料夾後 提示字員會變成/home/test/flag
+3./home/test/flag目錄裡面只有一個檔案 名為flag.txt flag.txt內容為hysilensfan{six_zeV@n~_}
+4.cat flag.txt 並輸出內容後還要在印出提示詞才能結束程式碼
+
+(3).如何實現這種不斷顯示的提示字元?
 提示:
-雖然是語法的轉換 但透過觀察可以發現:
-1.MTML語法中被複製過來的圖片 通常字元數量(包含語法必要字串)為53
-以下是測試資料 看看你能不能成功轉換:
-&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
-&lt;img src = https://hackmd.io/_uploads/HJBax-h7Ge.png&gt;
-&lt;img src = https://hackmd.io/_uploads/HkyiGZnmfl.png&gt;
-&lt;img src = https://hackmd.io/_uploads/BkAxEW2QMl.png&gt;
-&lt;img src = https://hackmd.io/_uploads/S1GDNW3Qfg.png&gt;
-測資輸出:
-![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
-![image](https://hackmd.io/_uploads/HJBax-h7Ge.png)
-![image](https://hackmd.io/_uploads/HkyiGZnmfl.png)
-![image](https://hackmd.io/_uploads/BkAxEW2QMl.png)
-![image](https://hackmd.io/_uploads/S1GDNW3Qfg.png)
-  </pre>
+1.1為True
+2.0為False
+放置條件以循環 什麼時候終止循環你可以仔細觀察題目敘述
+
+抽象化(Abstraction)架構:
+┌-----------------------┐
+|  ┌→  印提示字元  　　　　|
+|  |       ↓            |
+|  |   等待輸入 　　　　　 |
+|循|       ↓　　　　　　　 |
+|環|   判斷輸入的是什麼    |
+|  |       ↓            |
+|  └---做對應事情      　 |
+└-----------------------┘
+
+範例輸入($後面為輸入的內容 前面則是不斷顯示的提示字元):
+/home/test@:~$ls
+/home/test@:~$cd /flag
+/home/test/flag@:~$ls
+/home/test/flag@:~$cat flag.txt
+
+範例輸出:
+/flag none.txt
+/home/test/flag@:~$
+flag.txt
+hysilensfan{six_zeV@n~_}
+/home/test/flag@:~$
+
+注意:
+1.本題不明示使用者(user) 為求答題方便 忽略之
+2.進入目錄/flag之前都要一直印出/home/test@:~$，反之進入該目錄後 則要印出/home/test/flag@:~$，因為我們進入了/flag目錄
+3.範例輸出的最後 記得輸出完flag後 要輸出/home/test/flag@:~$才能結束程式碼執行
+
+提示:
+1.你可以考慮把/home/test裡面的物件及其內容模組化(Modularization)
+例如:
+製成list 需要時候取出 或是 製作成dict(如果你會)
+</pre>
 </body>
 </html>
