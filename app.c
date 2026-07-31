@@ -1,17 +1,15 @@
 #include <stdio.h>
 
-int main()
-{
+int main(){
     int recursion = 1, click_trig = 1;
     
     while (recursion){
-        if !(click_trig){
+        if (!(click_trig)){
             recursion = 0;
         }
         printf("(waiting u click specific link...)");
         scanf("%d", &click_trig);
     }
-    // flag in the comment:) or else diretory
-    
+    // The flag is in the comment or else diretory.:)
     return 0;
 }
