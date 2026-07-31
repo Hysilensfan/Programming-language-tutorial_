@@ -13,38 +13,33 @@
   </style>
 </head>
 <body>
-  <h1>First challenge ヽ(´ー`)ノ</h1>
-  <h2>1.HTMLgrammer convert to MD grammer
+  <h1>Sixteenth challenge ヽ(´ー`)ノ</h1>
+  <h2>16.The unicode encryption
     </h2>
-    <pre>HTML語法轉換MD語法
-傳寫一個程式碼 該程式碼會將HTML語法的字串轉換為MD語法
-針對圖片最基礎的轉換規則如下:
-1.將開頭的 `&lt;img src = ` 以及尾端的 `&gt;` 去除
-2.之後在開頭加上 `![image](` 以及尾端加上 `)`
-注意 要跟題目一樣去除MD字串內的空白(' ')部分!
-範例輸入:
-&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
-範例輸出:
-![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
+    <pre>unicode 編碼
+
+在Cpython中:
+使用chr()函數可以查看函數內部整數數值對應的 unicode 碼 ord()異之
+
 輸入:
-一個字串s
+一個字串(String) s
+
 輸出:
-轉換過後的字串
+該字串(String)第一個字元(Char)及其 unicode 編碼 中間以 : 字元相隔
+
+範例輸入:
+dfdfgrg
+
+範例輸出:
+d:100
+
+限制:
+1.65535 >= s的長度 > 0
+2.測試資料也會有中文跟其他特殊符號 請不要試圖全部以ASCII轉換 可以手搓unicode轉換
+
 提示:
-雖然是語法的轉換 但透過觀察可以發現:
-1.MTML語法中被複製過來的圖片 通常字元數量(包含語法必要字串)為53
-以下是測試資料 看看你能不能成功轉換:
-&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
-&lt;img src = https://hackmd.io/_uploads/HJBax-h7Ge.png&gt;
-&lt;img src = https://hackmd.io/_uploads/HkyiGZnmfl.png&gt;
-&lt;img src = https://hackmd.io/_uploads/BkAxEW2QMl.png&gt;
-&lt;img src = https://hackmd.io/_uploads/S1GDNW3Qfg.png&gt;
-測資輸出:
-![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
-![image](https://hackmd.io/_uploads/HJBax-h7Ge.png)
-![image](https://hackmd.io/_uploads/HkyiGZnmfl.png)
-![image](https://hackmd.io/_uploads/BkAxEW2QMl.png)
-![image](https://hackmd.io/_uploads/S1GDNW3Qfg.png)
-  </pre>
+1.手搓unicode轉換到整數值 你需要使用到&(And)運算子與|(Or)運算子以及右移位(&gt;&gt;)與左移位(&t;&lt;)運算子
+
+</pre>
 </body>
 </html>
