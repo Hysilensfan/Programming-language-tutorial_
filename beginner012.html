@@ -14,37 +14,28 @@
 </head>
 <body>
   <h1>First challenge ヽ(´ー`)ノ</h1>
-  <h2>1.HTMLgrammer convert to MD grammer
+  <h2>2.Digit sum
     </h2>
-    <pre>HTML語法轉換MD語法
-傳寫一個程式碼 該程式碼會將HTML語法的字串轉換為MD語法
-針對圖片最基礎的轉換規則如下:
-1.將開頭的 `&lt;img src = ` 以及尾端的 `&gt;` 去除
-2.之後在開頭加上 `![image](` 以及尾端加上 `)`
-注意 要跟題目一樣去除MD字串內的空白(' ')部分!
-範例輸入:
-&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
-範例輸出:
-![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
+    <pre>位數和
+
+今天我因為工程需求 要求取位數總和
+但不知道為什麼 工具不會顯示整數 其一定會將小數點往後1位的數字連著顯示
+
+假設我要計算114514的位數和 我就要先從1開始累加 1, 4, 5... 加加加 直到加到該整數最後一位數字 得出:16
+但還需要將其從整數(Integer)轉換浮點數(Floating)後 轉換後即為 16.0
+
 輸入:
-一個字串s
+一個整數s
+
 輸出:
-轉換過後的字串
-提示:
-雖然是語法的轉換 但透過觀察可以發現:
-1.MTML語法中被複製過來的圖片 通常字元數量(包含語法必要字串)為53
-以下是測試資料 看看你能不能成功轉換:
-&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
-&lt;img src = https://hackmd.io/_uploads/HJBax-h7Ge.png&gt;
-&lt;img src = https://hackmd.io/_uploads/HkyiGZnmfl.png&gt;
-&lt;img src = https://hackmd.io/_uploads/BkAxEW2QMl.png&gt;
-&lt;img src = https://hackmd.io/_uploads/S1GDNW3Qfg.png&gt;
-測資輸出:
-![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
-![image](https://hackmd.io/_uploads/HJBax-h7Ge.png)
-![image](https://hackmd.io/_uploads/HkyiGZnmfl.png)
-![image](https://hackmd.io/_uploads/BkAxEW2QMl.png)
-![image](https://hackmd.io/_uploads/S1GDNW3Qfg.png)
-  </pre>
+並求出各位數總和 以特定浮點數(Floating)格式輸出
+
+範例輸入:
+123
+
+範例輸出:
+6.0
+
+</pre>
 </body>
 </html>
