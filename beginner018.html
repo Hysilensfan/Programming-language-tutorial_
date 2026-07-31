@@ -13,38 +13,61 @@
   </style>
 </head>
 <body>
-  <h1>First challenge ヽ(´ー`)ノ</h1>
-  <h2>1.HTMLgrammer convert to MD grammer
+  <h1>Eighteenth challenge ヽ(´ー`)ノ</h1>
+  <h2>18.Fibonacci
     </h2>
-    <pre>HTML語法轉換MD語法
-傳寫一個程式碼 該程式碼會將HTML語法的字串轉換為MD語法
-針對圖片最基礎的轉換規則如下:
-1.將開頭的 `&lt;img src = ` 以及尾端的 `&gt;` 去除
-2.之後在開頭加上 `![image](` 以及尾端加上 `)`
-注意 要跟題目一樣去除MD字串內的空白(' ')部分!
-範例輸入:
-&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
-範例輸出:
-![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
+    <pre>
+費波那契數（義大利語：Numero di Fibonacci），又稱為菲波拿契數、菲波那西數、斐氏數、黃金分割數、費氏數列
+
+所形成的數列稱為費波那契數列（義大利語：Successione di Fibonacci），又稱為菲波拿契數列、菲波那西數列、
+黃金分割數列、費氏數列
+該數列由義大利數學家費波那契在他的《算盤書》中提出
+
+在數學上，費波那契數是以遞迴的方法來定義：
+F₀ = 0
+F₁ = 1
+Fₙ = Fₙ₋₁ + Fₙ₋₂ (n ≥ 2)
+
+用白話文來說，就是費氏數列由0和1開始，之後的費波那契數就是由之前的兩數相加而得出。
+
+首幾個費波那契數是：
+1、1、2、3、5、8、13、21、34、55、89、144、233、377、610、987……
+其中，特別指出：0不是第一項，而是第零項
+我統整出了一個遞迴關係式，如下：
+<table>
+<tr>
+<td class="left" rowspan="3">{</td>
+<td>F₀ = x</td>
+</tr>
+<tr>
+<td>F₁ = x+y</td>
+</tr>
+<tr>
+<td>Fₙ = Fₙ₋₁ + Fₙ₋₂</td>
+</tr>
+</table>
+撰寫一份程式碼 該程式碼會產生以某兩整數為初始值得的費氏數列 然後會輸出第 n 項
+
 輸入:
-一個字串s
+請求輸入三個整數 分別為 a b n
+其中:
+1.a 視為 x
+2.b視為y
+3.n 視為項數
+
 輸出:
-轉換過後的字串
-提示:
-雖然是語法的轉換 但透過觀察可以發現:
-1.MTML語法中被複製過來的圖片 通常字元數量(包含語法必要字串)為53
-以下是測試資料 看看你能不能成功轉換:
-&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
-&lt;img src = https://hackmd.io/_uploads/HJBax-h7Ge.png&gt;
-&lt;img src = https://hackmd.io/_uploads/HkyiGZnmfl.png&gt;
-&lt;img src = https://hackmd.io/_uploads/BkAxEW2QMl.png&gt;
-&lt;img src = https://hackmd.io/_uploads/S1GDNW3Qfg.png&gt;
-測資輸出:
-![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
-![image](https://hackmd.io/_uploads/HJBax-h7Ge.png)
-![image](https://hackmd.io/_uploads/HkyiGZnmfl.png)
-![image](https://hackmd.io/_uploads/BkAxEW2QMl.png)
-![image](https://hackmd.io/_uploads/S1GDNW3Qfg.png)
-  </pre>
+以a,b為初始值的第n個費波那契數
+
+範例輸入:
+0
+1
+10
+
+範例輸出:
+55
+
+限制:
+1.a、b、n≥0
+</pre>
 </body>
 </html>
