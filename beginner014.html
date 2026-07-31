@@ -13,38 +13,39 @@
   </style>
 </head>
 <body>
-  <h1>First challenge ヽ(´ー`)ノ</h1>
-  <h2>1.HTMLgrammer convert to MD grammer
+  <h1>forteenth challenge ヽ(´ー`)ノ</h1>
+  <h2>1.Caesar cipher encryption
     </h2>
-    <pre>HTML語法轉換MD語法
-傳寫一個程式碼 該程式碼會將HTML語法的字串轉換為MD語法
-針對圖片最基礎的轉換規則如下:
-1.將開頭的 `&lt;img src = ` 以及尾端的 `&gt;` 去除
-2.之後在開頭加上 `![image](` 以及尾端加上 `)`
-注意 要跟題目一樣去除MD字串內的空白(' ')部分!
-範例輸入:
-&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
-範例輸出:
-![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
+    <pre>凱薩密碼加密
+
+輸入一個英文字母 將他經過經典的位移(Shift) 3 之後轉換為小寫輸出吧!
+
 輸入:
-一個字串s
+一個大/小寫的英文字母字元(Char) s
+
 輸出:
-轉換過後的字串
+經凱薩位移後的英文字母字元(Char)
+
+範例輸入:
+F
+
+範例輸出:
+i
+
 提示:
-雖然是語法的轉換 但透過觀察可以發現:
-1.MTML語法中被複製過來的圖片 通常字元數量(包含語法必要字串)為53
-以下是測試資料 看看你能不能成功轉換:
-&lt;img src = https://hackmd.io/_uploads/BJdNlZh7Mg.png&gt;
-&lt;img src = https://hackmd.io/_uploads/HJBax-h7Ge.png&gt;
-&lt;img src = https://hackmd.io/_uploads/HkyiGZnmfl.png&gt;
-&lt;img src = https://hackmd.io/_uploads/BkAxEW2QMl.png&gt;
-&lt;img src = https://hackmd.io/_uploads/S1GDNW3Qfg.png&gt;
-測資輸出:
-![image](https://hackmd.io/_uploads/BJdNlZh7Mg.png)
-![image](https://hackmd.io/_uploads/HJBax-h7Ge.png)
-![image](https://hackmd.io/_uploads/HkyiGZnmfl.png)
-![image](https://hackmd.io/_uploads/BkAxEW2QMl.png)
-![image](https://hackmd.io/_uploads/S1GDNW3Qfg.png)
-  </pre>
+1.index()函數也許可以幫助到你
+給個使用範例:
+a= "abc"
+print(a.index('b'))
+3.可以利用ASCII特性
+2.ord()跟chr()函數或許也有幫助喔!?
+    
+注意:
+1.輸入可以大寫可以小寫 但處理過程一定要將輸入轉換為小寫 可以利用lower()函數將字元轉換為小寫
+2.本題教學方式參照Cpython 但一定可以用各程式語言解出
+
+限制:
+1.輸入一定都是英文字母 不用特地驗證
+</pre>
 </body>
 </html>
