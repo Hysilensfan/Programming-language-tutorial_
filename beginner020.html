@@ -22,26 +22,27 @@ C 程式語言中的 rand()函數是利用線性同餘生成器（LCG, Linear Co
 其公式如下:
 X<sub>n+1</sub> = (aX<sub>n</sub> + c) mod m
 
-每一次通過 seed 計算出下一個數字
+該偽隨機(Psuedo random)方式 每一次會通過 seed 計算出下一個數字
 
 優點包括:
-易除錯
-快速
-不需要多餘硬體
+□ 易除錯(Easier to debugging)
+□ 快速(Quickliear)
+□ 不需要多餘硬體(Don't need more hardware to executing)
 
 C++ 與 Cpython 程式語言裡也是偽隨機函數比較多人在作業用 分別為 std::mt19937() 與 random.randint()這兩個函數
 演算法都是用到Mersenne Twister(梅森螺旋演算法)
 
-真隨機也是有的
+真隨機(True ramdom)也是有的
 
-像是Cpython 的 secrets.randbelow()
-但真正的隨機通常較慢 而且無法重現
+像是 Cpython 的 secrets.randbelow()
+但真正的隨機通常較慢(Slower  to generating) 而且無法重現(Unreapperabble)
 
 輸入:
 分別請求兩個正整數 x 與 y
 
 輸出:
-x ~ y <strong>+ 1 </strong> 隨機取樹的值加上正整數 1 之後以雙倍精準度浮點數後面第16位輸出
+x ~ y <strong>+ 1 </strong> 隨機取數的正整數值加上正整數值的 1
+之後以<strong>雙倍精準度浮點數</strong>取到小數點後面第16位進行輸出
 
 範例輸入:
 4 15
