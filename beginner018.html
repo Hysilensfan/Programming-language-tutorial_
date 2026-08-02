@@ -10,6 +10,21 @@
         pre {
             font-size: 1.3em;
         }
+        .formula {
+        display: flex;
+          justify-content: center;
+        align-items: center;
+      }  
+
+        .brace {
+        font-size: 80px;
+        line-height: 0.8;
+        margin-right: 10px;
+    }
+
+.    content {
+        text-align: left;
+    }
   </style>
 </head>
 <body>
@@ -34,18 +49,14 @@ Fₙ = Fₙ₋₁ + Fₙ₋₂ (n ≥ 2)
 1、1、2、3、5、8、13、21、34、55、89、144、233、377、610、987……
 其中，特別指出：0不是第一項，而是第零項
 我統整出了一個遞迴關係式，如下：
-<table>
-<tr>
-<td class="left" rowspan="3">{</td>
-<td>F₀ = x</td>
-</tr>
-<tr>
-<td>F₁ = x+y</td>
-</tr>
-<tr>
-<td>Fₙ = Fₙ₋₁ + Fₙ₋₂</td>
-</tr>
-</table>
+<div class="formula">
+    <span class="brace">{</span>
+    <div class="content">
+        <div>F₀ = x</div>
+        <div>F₁ = y</div>
+        <div>Fₙ = Fₙ₋₁ + Fₙ₋₂</div>
+    </div>
+</div>
 撰寫一份程式碼 該程式碼會產生以某兩整數為初始值得的費氏數列 然後會輸出第 n 項
 
 輸入:
