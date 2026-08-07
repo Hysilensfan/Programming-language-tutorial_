@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 #define p(x) printf(x)
 #define loop(x) for(int i = 0;i < x;i++)
