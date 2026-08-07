@@ -22,7 +22,7 @@ def specific_prime(w: int) -> bool:
     return is_prime(w) and is_unhappy(w) and same_difference(w)
 
 
-u = [i for i in range(1, int(input()) + 1)]
+u: list = [i for i in range(1, int(input()) + 1)]
 for k in u:
     if specific_prime(k):
         print(k)
