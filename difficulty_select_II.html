@@ -1,1 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    試題評測表單
+  </title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 30px;
+        }
 
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        /* 試題區 */
+        .question-section {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 25px;
+        }
+
+        .question {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .question-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .option {
+            margin: 10px 0;
+        }
+
+        /* 評測結果區 */
+        .result-section {
+            padding-top: 25px;
+        }
+
+        .result {
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #eef6ff;
+            margin-bottom: 15px;
+        }
+
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+
+        .incorrect {
+            color: red;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ==================== 試題內容 ==================== -->
+    <div class="question-section">
+
+        <h2>試題內容</h2>
+
+        <div class="question">
+            <div class="question-title">
+                1. HTML 中用來建立超連結的標籤是哪一個？
+            </div>
+
+            <div class="option">
+                <label>
+                    <input type="radio" name="q1" value="A">
+                    A. &lt;p&gt;
+                </label>
+            </div>
+
+            <div class="option">
+                <label>
+                    <input type="radio" name="q1" value="B">
+                    B. &lt;a&gt;
+                </label>
+            </div>
+
+            <div class="option">
+                <label>
+                    <input type="radio" name="q1" value="C">
+                    C. &lt;div&gt;
+                </label>
+            </div>
+
+            <div class="option">
+                <label>
+                    <input type="radio" name="q1" value="D">
+                    D. &lt;link&gt;
+                </label>
+            </div>
+        </div>
+
+        <button type="button" onclick="evaluateTest()">
+            開始評測
+        </button>
+
+    </div>
+
+
+    <!-- ==================== 評測結果 ==================== -->
+    <div class="result-section">
+
+        <h2>評測結果</h2>
+
+        <div id="result">
+            尚未進行評測
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+function evaluateTest() {
+
+    // 正確答案
+    const answer = "B";
+
+    // 使用者答案
+    const selected = document.querySelector(
+        'input[name="q1"]:checked'
+    );
+
+    const result = document.getElementById("result");
+
+    if (!selected) {
+        result.innerHTML = `
+            <div class="result">
+                請先回答試題。
+            </div>
+        `;
+        return;
+    }
+
+    if (selected.value === answer) {
+
+        result.innerHTML = `
+            <div class="result">
+                <span class="correct">✓ 答對</span>
+                <p>你的答案：${selected.value}</p>
+                <p>正確答案：${answer}</p>
+            </div>
+        `;
+
+    } else {
+
+        result.innerHTML = `
+            <div class="result">
+                <span class="incorrect">✗ 答錯</span>
+                <p>你的答案：${selected.value}</p>
+                <p>正確答案：${answer}</p>
+            </div>
+        `;
+    }
+}
+</script>
+</body>
+</html>
